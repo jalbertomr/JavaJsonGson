@@ -23,7 +23,7 @@ public class JsonTest {
         JsonObject rootObject = rootElement.getAsJsonObject();
         JsonObject pages = rootObject.getAsJsonObject("query").getAsJsonObject("pages");
         JsonArray arrayRevisions = null;
-        for (Map.Entry<String,JsonElement> entry : pages.entrySet()) {   //En este caso solo hay una page
+        for (Map.Entry<String,JsonElement> entry : pages.entrySet()) {   //En este caso hay dos pages
             JsonObject entryObject = entry.getValue().getAsJsonObject();
             arrayRevisions = entryObject.getAsJsonArray("revisions");
         }
